@@ -9,22 +9,32 @@
     --fuente_principal: 3.8rem;
 }
 
+.servicios, 
+.nav,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
 
+/*Ojo con esto*/
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 body {
     font-size: 1.6rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
                                     /*DIRECCION   COLOR 1           INICIO   COLOR 2     FIN*/
     background-image: linear-gradient(to top, var(--gris-claro) 0%, var(--blanco) 100%);
 }
 
 h1 {
-    font-size: var(--fuente_principal);
     font-size: 3.8rem;
 
 }
@@ -32,10 +42,11 @@ h1 {
 h2 {
     font-size: 2.8rem;
 }
+h3{
+    font-size: 1.8rem;
+}
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     text-align: center;
 }
 
@@ -120,10 +131,15 @@ h3 {
     color: var(--blanco);
 }
 
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: end;
+}
+
 .boton {
     background-color: #0097A7;
     padding: 1rem 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: #ffffff;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -231,17 +247,17 @@ h3 {
     .contenedor-campos{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto 20rem;
+        grid-template-rows: auto auto 20rem;
         column-gap: 1rem;
     }
+    /*Selecciona los 2 ultimos campos del div con la calase campo*/
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
 }
-.contenedor-campos{
-    display: grid;
-}
-
 .campo{
     margin-bottom: 1rem;
-
 }
 
 .campo label{
@@ -263,6 +279,8 @@ h3 {
     border-radius: .5rem;
 }
 
-.enviar .boton{
-    width: 100%;
+
+
+.footer{
+    text-align: center;
 }
