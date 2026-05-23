@@ -1,0 +1,304 @@
+:root{
+    --fuenteHeaders: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Sans', sans-serif;
+
+    --primario: #784D3C;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #e1e1e1;
+}
+/*Clases globales*/
+
+/*HTML Y BODY recomendada en todos los proyectos*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeaders);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 2rem;
+}
+
+/*CLASES*/
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+
+/*HEADER*/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 55rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center ;
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) { 
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+.logo__bold{
+    font-weight: 700;
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) { 
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/*Contenido Principal*/
+@media (min-width: 768px) { 
+  .contenido-principal{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}  
+}
+
+.entrada{
+    border-bottom:1px solid var(--gris);
+    margin-bottom: 3rem;
+}
+
+.entrada:last-of-type{
+    border-bottom:none;
+    margin-bottom: 0;
+}
+
+.blog__imagen{
+    width: 100%;
+    max-width: 70rem;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeaders);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: none;
+}
+@media (min-width: 768px) { 
+    .boton{
+        display: inline-block;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+/*Sidebar*/
+.cursos{
+    list-style: none;
+}
+
+.widget-curso {
+    border-bottom:1px solid var(--gris);
+    margin-bottom: 3rem;
+}
+
+.widget-curso:last-of-type{
+    border-bottom:none ;
+    margin-bottom: 0;
+
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeaders);
+    font-weight: bold;
+}
+.widget-curso__info,
+.curso__info {
+    font-weight: normal;
+}
+.widget-curso__info,
+.widget-curso__label,
+.curso__label{
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--negro);
+    margin-top: 4rem;
+    padding: 3rem 0;
+}
+
+/*Sobre nosotros*/
+
+@media (min-width: 768px) { 
+    .sobre-nosotros{
+        display: flex;
+        gap: 3rem;
+    }
+
+    .sobre-nosotros__imagen,
+    .sobre-nosotros__texto{
+        flex-basis: 50%;
+    }
+}
+
+/*Cursos*/
+@media (min-width: 768px) { 
+    .curso{
+        display: grid;
+        grid-template-columns: 33.3% 66.6%;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.cursos__imagen{
+    border-radius: 2rem;
+    width: auto;
+}
+
+.cursos__texto{
+
+}
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+.curso:last-of-type{
+    border-bottom:none ;
+    margin-bottom: 0;
+
+}
+
+/*CONTACTO*/
+.contacto__fondo{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+
+.formulario{
+     background-color: var(--blanco);
+     margin: -5rem auto 0 auto;
+     width: 95%;
+     padding: 2rem;
+    border-radius: 2rem;
+
+    }
+
+.campo{
+    display: flex ;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+
+
+.campo__label{
+    flex: 0 0 9rem ;
+    text-align: right;
+    font-weight: bold;
+
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.campo__field--textarea{
+    height: 20rem;
+
+}
