@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../src/scss/layout/video.scss","../../../src/scss/base/_mixins.scss","../../../src/scss/base/_variables.scss"],"names":[],"mappings":"AAGA;EACI;EACA;EACA;EACA;;AAEA;EACI;EACA;EAKA;EACA;EACA;;AAGJ;EACI;EACA;;ACVJ;EDQA;IAIQ;;;;AAOR;EACI,OExBE;EFyBF;EACA;;AAGJ;EACI,OE9BE;EF+BF;EACA,kBEpCA;EFqCA;EACA;EACA;EACA","file":"video.css"}
