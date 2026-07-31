@@ -5,19 +5,31 @@ class Producto
 {
 
 
-    public function __construct(public string $nombre, public int $precio, public bool $disponible) {}
+    public function __construct(protected string $nombre, public int $precio, public bool $disponible) {}
 
     public function mostrarProducto()
     {
         echo 'El producto es: ' . $this->nombre . ' Y el precio es de: ' . $this->precio;
     }
+
+    public function getNombre() : string
+    {
+        return $this->nombre;
+    }
+
+    public function setNombre(string $nombre)
+    {
+        $this->nombre = $nombre;
+    }
 }
 
 
 
-
 $producto = new Producto('Telefono', 200, true);
-$producto->mostrarProducto();
+
+echo $producto->getNombre();
+$producto->setNombre('Modificado');
+
 $producto2 = new Producto('PC', 3300, false);
 $producto2->mostrarProducto();
 
@@ -30,8 +42,8 @@ $producto2->mostrarProducto();
 echo "<pre>";
 var_dump($producto);
 echo "</pre>";
-echo "<pre>";
-var_dump($producto2);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($producto2);
+// echo "</pre>";
 
 include 'includes/footer.php';
